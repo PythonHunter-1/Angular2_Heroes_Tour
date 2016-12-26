@@ -22,7 +22,7 @@ export class HeroesComponent implements OnInit {
 		this.selectedHero = hero;
 	}
 	getHeroes(): void {
-		this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+		this.heroService.getHeroes().then(heroes => this.heroes = heroes);
 	}
 	gotoDetail(): void {
 		this.router.navigate(['/detail', this.selectedHero.id]);
